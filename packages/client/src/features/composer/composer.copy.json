@@ -1,14 +1,14 @@
 {
-  "composerTitle": { "zh": "重绘对话框", "en": "Composer restyle" },
-  "scopeOff": { "zh": "关闭", "en": "Off" },
-  "scopeHero": { "zh": "仅首页", "en": "Home only" },
-  "scopeConversation": { "zh": "仅对话", "en": "Conversation only" },
-  "scopeAll": { "zh": "全部", "en": "All" },
-  "heroHint": { "zh": "描述任务或提出问题", "en": "How can I help you today?" },
-  "defaultHint": { "zh": "输入 / 以使用命令", "en": "Type / for commands" },
-  "composerBottomGapTitle": { "zh": "底部间距", "en": "Bottom gap" },
-  "composerBottomGapDesc": { "zh": "对话页输入区与窗口底边的距离。", "en": "Room between the conversation's composer and the bottom of the window." },
-  "gapCompact": { "zh": "紧凑", "en": "Compact" },
-  "gapTheme": { "zh": "默认", "en": "Default" },
-  "gapRoomy": { "zh": "宽松", "en": "Roomy" }
+  "composerTitle": { "zh": "重绘对话框", "en": "Composer restyle", "ru": "Оформление поля ввода" },
+  "scopeOff": { "zh": "关闭", "en": "Off", "ru": "Выкл." },
+  "scopeHero": { "zh": "仅首页", "en": "Home only", "ru": "Только главная" },
+  "scopeConversation": { "zh": "仅对话", "en": "Conversation only", "ru": "Только диалог" },
+  "scopeAll": { "zh": "全部", "en": "All", "ru": "Везде" },
+  "heroHint": { "zh": "描述任务或提出问题", "en": "How can I help you today?", "ru": "Чем могу помочь сегодня?" },
+  "defaultHint": { "zh": "输入 / 以使用命令", "en": "Type / for commands", "ru": "Введите / для команд" },
+  "composerBottomGapTitle": { "zh": "底部间距", "en": "Bottom gap", "ru": "Отступ снизу" },
+  "composerBottomGapDesc": { "zh": "对话页输入区与窗口底边的距离。", "en": "Room between the conversation's composer and the bottom of the window.", "ru": "Расстояние от поля ввода в диалоге до нижнего края окна." },
+  "gapCompact": { "zh": "紧凑", "en": "Compact", "ru": "Плотный" },
+  "gapTheme": { "zh": "默认", "en": "Default", "ru": "По умолчанию" },
+  "gapRoomy": { "zh": "宽松", "en": "Roomy", "ru": "Просторный" }
 }

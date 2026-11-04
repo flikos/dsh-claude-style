@@ -1,4 +1,4 @@
 {
-  "permissionGroupLabel": { "zh": "权限", "en": "Permission" },
-  "permissionsTitle": { "zh": "重绘权限控件", "en": "Redraw the permission control" }
+  "permissionGroupLabel": { "zh": "权限", "en": "Permission", "ru": "Разрешения" },
+  "permissionsTitle": { "zh": "重绘权限控件", "en": "Redraw the permission control", "ru": "Перерисовать управление разрешениями" }
 }

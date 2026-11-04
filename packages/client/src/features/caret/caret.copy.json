@@ -1,6 +1,6 @@
 {
-  "caretTitle": { "zh": "光标动画", "en": "Composer caret motion" },
-  "caretSample": { "zh": "Hello World!", "en": "Hello World!" },
-  "caretOn": { "zh": "开", "en": "On" },
-  "caretOff": { "zh": "关", "en": "Off" }
+  "caretTitle": { "zh": "光标动画", "en": "Composer caret motion", "ru": "Движение каретки в поле ввода" },
+  "caretSample": { "zh": "Hello World!", "en": "Hello World!", "ru": "Привет, мир!" },
+  "caretOn": { "zh": "开", "en": "On", "ru": "Вкл." },
+  "caretOff": { "zh": "关", "en": "Off", "ru": "Выкл." }
 }

@@ -1,6 +1,6 @@
 import { PERMISSION_ACCESS_NAMESPACE, PERMISSION_CHINESE_LABELS, PERMISSION_CURRENT_LABELS, PERMISSION_HOST_LABEL_KEYS, PERMISSION_HOST_LABEL_LOCALE, PERMISSION_ORDER, PERMISSION_PRESETS, PERMISSION_SEGMENTS, PERMISSION_SHIPPED_PRESETS } from './permission-copy'
 import { hostLocale, hostRemote, hostRemotePermissionPresets } from '@dsh-claude-style/engine/host'
-import { activeLocale } from '../../core/i18n'
+import { activeLocale, localized } from '../../core/i18n'
 import type { HostContext, HostFiber } from '@dsh-claude-style/engine/host'
 import type { HostPermissionCatalogAnswer, HostPermissionOption } from '@dsh-claude-style/contracts/services'
 
@@ -106,7 +106,7 @@ export function createPermissionCatalog(ctx: HostContext, schedule: () => void):
     const text: string = locale.bind(PERMISSION_ACCESS_NAMESPACE)(key)
     if (typeof text !== 'string' || text === '' || text === key) return ''
     const known = PERMISSION_PRESETS[preset]
-    return known !== undefined && known.label === text ? '' : text
+    return known !== undefined && known.label.en === text ? '' : text
   }
 
   /** The name a preset reads as: the host's own Chinese name first, then the skin's table, then the host's catalog. */
@@ -116,15 +116,15 @@ export function createPermissionCatalog(ctx: HostContext, schedule: () => void):
     const known = PERMISSION_PRESETS[preset]
     if (known !== undefined) {
       // A Chinese interface takes the skin's own Chinese name where it carries
-      // one (PERMISSION_CHINESE_LABELS); the English name is for every other
-      // language, and for a tier the host translates itself.
+      // one (PERMISSION_CHINESE_LABELS); every other language reads the pair's
+      // own line (English last), including a tier the host translates itself.
       const chinese = readsHostTierNames() ? PERMISSION_CHINESE_LABELS[preset] : undefined
-      return chinese === undefined ? known.label : chinese
+      return chinese === undefined ? localized(known.label, ctx) : chinese
     }
     const option = catalogOption(preset)
     if (option !== null && typeof option.name === 'string' && option.name !== '') return option.name
     const current = PERMISSION_CURRENT_LABELS[preset]
-    return current === undefined ? preset : current
+    return current === undefined ? preset : localized(current, ctx)
   }
 
   /** The name the control reads before a session's preset is known: the tier the host starts a session in. */
@@ -135,7 +135,7 @@ export function createPermissionCatalog(ctx: HostContext, schedule: () => void):
   /** The one line under that name, from the same two sources. */
   function presetDesc(preset: string): string {
     const known = PERMISSION_PRESETS[preset]
-    if (known !== undefined) return known.desc
+    if (known !== undefined) return localized(known.desc, ctx)
     const option = catalogOption(preset)
     return option !== null && typeof option.description === 'string' ? option.description : ''
   }

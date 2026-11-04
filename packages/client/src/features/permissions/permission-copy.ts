@@ -5,13 +5,55 @@
  * them — and this table decides how a known one reads. A preset the table
  * does not know falls back to the name the catalog carries, so nothing the
  * host offers is ever hidden and a machine id is never shown.
+ *
+ * Each line is a `{ locale: text }` pair read through core/i18n's `localized`:
+ * the interface language first, the English copy last. A Chinese interface
+ * reads the host's own names instead (D43); Russian reads the `ru` line.
  */
-export const PERMISSION_PRESETS: Record<string, { label: string, desc: string }> = {
-  'read-only': { label: 'Read only', desc: '仅读取文件与分析，不修改代码' },
-  'workspace-write': { label: 'Accept edits', desc: '允许编辑工作区文件' },
-  'auto-mode': { label: 'Auto mode', desc: '规则放行常规操作，其余由分类器裁决' },
-  'auto': { label: 'Auto review', desc: '无沙箱运行，调用前由模型审查' },
-  'danger-full-access': { label: 'Full access', desc: '自动执行，无需反复确认' }
+export const PERMISSION_PRESETS: Record<string, {
+  label: { zh: string, en: string, ru: string },
+  desc: { zh: string, en: string, ru: string }
+}> = {
+  'read-only': {
+    label: { zh: '只读', en: 'Read only', ru: 'Только чтение' },
+    desc: {
+      zh: '仅读取文件与分析，不修改代码',
+      en: 'Read files and analyze them without changing code',
+      ru: 'Читает файлы и анализирует их, не изменяя код'
+    }
+  },
+  'workspace-write': {
+    label: { zh: '接受编辑', en: 'Accept edits', ru: 'Принимать правки' },
+    desc: {
+      zh: '允许编辑工作区文件',
+      en: 'Allow editing files in the workspace',
+      ru: 'Разрешает изменять файлы в рабочей папке'
+    }
+  },
+  'auto-mode': {
+    label: { zh: '自动模式', en: 'Auto mode', ru: 'Авторежим' },
+    desc: {
+      zh: '规则放行常规操作，其余由分类器裁决',
+      en: 'Rules let routine actions through; the classifier decides the rest',
+      ru: 'Обычные действия пропускаются по правилам, остальные решает классификатор'
+    }
+  },
+  'auto': {
+    label: { zh: '自动审查', en: 'Auto review', ru: 'Автопроверка' },
+    desc: {
+      zh: '无沙箱运行，调用前由模型审查',
+      en: 'Run without a sandbox; the model reviews each call before it runs',
+      ru: 'Работа без песочницы: модель проверяет каждый вызов перед запуском'
+    }
+  },
+  'danger-full-access': {
+    label: { zh: '完全权限', en: 'Full access', ru: 'Полный доступ' },
+    desc: {
+      zh: '自动执行，无需反复确认',
+      en: 'Run without asking for confirmation each time',
+      ru: 'Выполняет действия без повторных подтверждений'
+    }
+  }
 }
 
 /**
@@ -65,4 +107,6 @@ export const PERMISSION_SHIPPED_PRESETS = ['read-only', 'workspace-write', 'dang
  * host's own word for knob settings that match no preset, so the trigger
  * reads that rather than the machine value.
  */
-export const PERMISSION_CURRENT_LABELS: Record<string, string> = { custom: 'Custom' }
+export const PERMISSION_CURRENT_LABELS: Record<string, { zh: string, en: string, ru: string }> = {
+  custom: { zh: '自定义', en: 'Custom', ru: 'Свой' }
+}

@@ -1,9 +1,9 @@
 {
-  "ratePeak": { "zh": "峰价", "en": "Peak rate" },
-  "rateOffPeak": { "zh": "谷价", "en": "Off-peak rate" },
-  "rateCampaign": { "zh": "活动价", "en": "Promotion" },
-  "rateNow": { "zh": "此刻 {rate}", "en": "Now {rate}" },
-  "rateNext": { "zh": "{countdown} 后转为 {next}", "en": "in {countdown} → {next}" },
-  "peakrateTitle": { "zh": "峰谷电表", "en": "Peak rate meter" },
-  "peakrateDesc": { "zh": "模型菜单每一行的此刻倍率与切换时间。", "en": "Each model menu row's current rate and when it changes." }
+  "ratePeak": { "zh": "峰价", "en": "Peak rate", "ru": "Пиковый тариф" },
+  "rateOffPeak": { "zh": "谷价", "en": "Off-peak rate", "ru": "Внепиковый тариф" },
+  "rateCampaign": { "zh": "活动价", "en": "Promotion", "ru": "Акция" },
+  "rateNow": { "zh": "此刻 {rate}", "en": "Now {rate}", "ru": "Сейчас {rate}" },
+  "rateNext": { "zh": "{countdown} 后转为 {next}", "en": "in {countdown} → {next}", "ru": "через {countdown} → {next}" },
+  "peakrateTitle": { "zh": "峰谷电表", "en": "Peak rate meter", "ru": "Индикатор пикового тарифа" },
+  "peakrateDesc": { "zh": "模型菜单每一行的此刻倍率与切换时间。", "en": "Each model menu row's current rate and when it changes.", "ru": "Текущий тариф в каждой строке меню моделей и момент его смены." }
 }

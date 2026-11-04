@@ -1,12 +1,12 @@
 {
-  "mascotTitle": { "zh": "吉祥物", "en": "Mascot" },
-  "mascotDesc": { "zh": "站在输入框上沿的像素小伙伴。", "en": "The pixel companion on the input area's top edge." },
-  "mascotBrand": { "zh": "自动", "en": "Follow the brand" },
-  "mascotCrab": { "zh": "Clawd", "en": "Crab" },
-  "mascotDeepy": { "zh": "Deepy", "en": "Deepy" },
-  "mascotWhaleGirl": { "zh": "鲸娘", "en": "Whale Girl" },
-  "mascotOff": { "zh": "关闭", "en": "Off" },
-  "mascotScopeTitle": { "zh": "出现位置", "en": "Where it appears" },
-  "mascotScopeHome": { "zh": "首页", "en": "Home" },
-  "mascotScopeAll": { "zh": "首页与对话", "en": "Home and conversation" }
+  "mascotTitle": { "zh": "吉祥物", "en": "Mascot", "ru": "Маскот" },
+  "mascotDesc": { "zh": "站在输入框上沿的像素小伙伴。", "en": "The pixel companion on the input area's top edge.", "ru": "Пиксельный спутник на верхней кромке поля ввода." },
+  "mascotBrand": { "zh": "自动", "en": "Follow the brand", "ru": "Как у бренда" },
+  "mascotCrab": { "zh": "Clawd", "en": "Crab", "ru": "Краб" },
+  "mascotDeepy": { "zh": "Deepy", "en": "Deepy", "ru": "Дипи" },
+  "mascotWhaleGirl": { "zh": "鲸娘", "en": "Whale Girl", "ru": "Девушка-кит" },
+  "mascotOff": { "zh": "关闭", "en": "Off", "ru": "Выкл." },
+  "mascotScopeTitle": { "zh": "出现位置", "en": "Where it appears", "ru": "Где показывать" },
+  "mascotScopeHome": { "zh": "首页", "en": "Home", "ru": "Главная" },
+  "mascotScopeAll": { "zh": "首页与对话", "en": "Home and conversation", "ru": "Главная и диалог" }
 }

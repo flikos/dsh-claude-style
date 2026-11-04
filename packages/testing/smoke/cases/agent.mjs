@@ -13,7 +13,7 @@ export default {
       r.permRows.every(function (row) { return row.preset !== 'auto' }) && r.permAutoRowDisplay === null,
       JSON.stringify(r.permRows))
     check('the tier reads as a Claude name, not as its machine id',
-      r.permRows[2].text.indexOf('Auto mode') === 0 && r.permRows[2].text.indexOf('分类器') !== -1 &&
+      r.permRows[2].text.indexOf('Auto mode') === 0 && r.permRows[2].text.indexOf('classifier') !== -1 &&
         r.permRows[2].text.indexOf('auto-mode') === -1,
       JSON.stringify(r.permRows[2].text))
     check('the ladder stays one text list: no row draws a glyph',

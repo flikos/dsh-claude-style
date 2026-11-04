@@ -1,0 +1,8 @@
+{
+  "group": "fixes",
+  "order": 200,
+  "at": "2026-11-04",
+  "external": false,
+  "zh": "修复权限模式说明不随界面语言切换的问题",
+  "en": "Fix permission descriptions ignoring the interface language"
+}
